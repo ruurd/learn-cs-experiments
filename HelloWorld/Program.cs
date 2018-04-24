@@ -1,12 +1,26 @@
 ﻿using System;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace HelloWorld
 {
     class Program
     {
-        static void Main(string[] args)
+        private Greeter greeter;
+
+        public Program()
         {
-            Console.WriteLine("Hello World!");
+            greeter = new Greeter();
+        }
+
+        public void Run()
+        {
+            greeter.SayHello();
+            greeter.SayHello("Ruurd");
+        }
+
+        public static void Main(string[] args)
+        {
+            new Program().Run();
         }
     }
 }
