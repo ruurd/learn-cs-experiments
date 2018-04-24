@@ -5,17 +5,16 @@ namespace HelloWorld
 {
     class Program
     {
-        private Greeter greeter;
+        private readonly Greeter _greeter;
 
         public Program()
         {
-            greeter = new Greeter();
+            _greeter = new Greeter("Ruurd");
         }
 
         public void Run()
         {
-            greeter.SayHello();
-            greeter.SayHello("Ruurd");
+            _greeter.SayHello();
         }
 
         public static void Main(string[] args)

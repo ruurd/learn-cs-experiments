@@ -4,12 +4,19 @@ namespace HelloWorld
 {
     public class Greeter
     {
-        public void SayHello(String toWho = null)
+        private string _toWho = null;
+        
+        public Greeter(string who)
         {
-            if (toWho == null) {
-                toWho = "World";
+            _toWho = who;
+        }
+        
+        public void SayHello()
+        {
+            if (_toWho == null) {
+                _toWho = "World";
             }
-            Console.WriteLine("Hello {0}!", toWho);
+            Console.WriteLine("Hello {0}!", _toWho);
         }
     }
 }
